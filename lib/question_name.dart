@@ -8,7 +8,6 @@ class Question extends StatefulWidget {
 }
 
 class _QuestionState extends State<Question> {
-
   // 問題
   List<String> questions = [
     '第1問\n「スクラム」という名前は、\nラグビーの肩を組んでぶつかり合うスクラムからきている',
@@ -67,66 +66,66 @@ class _QuestionState extends State<Question> {
             ),
             Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: RaisedButton(
-                    onPressed: () {
-                      bool correctAnswer = answers[questionNumber];
+              padding: const EdgeInsets.all(20.0),
+              child: RaisedButton(
+                onPressed: () {
+                  bool correctAnswer = answers[questionNumber];
 
-                      // 正解だった場合、正解数に1を足す
-                      if (correctAnswer == true) {
-                        numberOfCorrectAnswers++;
-                      }
+                  // 正解だった場合、正解数に1を足す
+                  if (correctAnswer == true) {
+                    numberOfCorrectAnswers++;
+                  }
 
-                      if (questionNumber + 1 < questions.length) {
-                        setState(() {
-                          questionNumber++;
-                        });
-                      } else {
-                        // 結果画面に遷移
-                      }
-                    },
-                    child: Text(
-                      '○',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    color: Color(0xFFccdb37),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
+                  if (questionNumber + 1 < questions.length) {
+                    setState(() {
+                      questionNumber++;
+                    });
+                  } else {
+                    // 結果画面に遷移
+                  }
+                },
+                child: Text(
+                  '○',
+                  style: TextStyle(
+                    fontSize: 20.0,
                   ),
-                )),
+                ),
+                color: Color(0xFFccdb37),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+              ),
+            )),
             Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: RaisedButton(
-                    onPressed: () {
-                      bool correctAnswer = answers[questionNumber];
+              padding: const EdgeInsets.all(20.0),
+              child: RaisedButton(
+                onPressed: () {
+                  bool correctAnswer = answers[questionNumber];
 
-                      // 正解だった場合、正解数に1を足す
-                      if (correctAnswer == false) {
-                        numberOfCorrectAnswers++;
-                      }
+                  // 正解だった場合、正解数に1を足す
+                  if (correctAnswer == false) {
+                    numberOfCorrectAnswers++;
+                  }
 
-                      if (questionNumber + 1 < questions.length) {
-                        setState(() {
-                          questionNumber++;
-                        });
-                      } else {
-                        // 結果画面に遷移
-                      }
-                    },
-                    child: Text(
-                      '×',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    color: Color(0xFFccdb37),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
+                  if (questionNumber + 1 < questions.length) {
+                    setState(() {
+                      questionNumber++;
+                    });
+                  } else {
+                    // 結果画面に遷移
+                  }
+                },
+                child: Text(
+                  '×',
+                  style: TextStyle(
+                    fontSize: 20.0,
                   ),
-                )),
+                ),
+                color: Color(0xFFccdb37),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+              ),
+            )),
           ],
         ),
       ),
