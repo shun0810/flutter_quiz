@@ -71,7 +71,12 @@ class Result extends StatelessWidget {
                 vertical: 20.0,
               ),
               child: RaisedButton(
-                onPressed: null,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Start()),
+                  );
+                },
                 child: Text(
                   'はじめに戻る',
                   style: TextStyle(
