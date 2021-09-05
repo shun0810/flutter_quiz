@@ -39,7 +39,7 @@ class _StartPageState extends State<StartPage> {
                 ));
           },
           child: Text(
-            'はじまる',
+            'はじめる',
             style: TextStyle(
               fontSize: 15.0,
               fontWeight: FontWeight.bold,

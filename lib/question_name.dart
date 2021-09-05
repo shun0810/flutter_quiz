@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'result.dart';
+
 class Question extends StatefulWidget {
   // const Question({Key? key}) : super(key: key);
 
@@ -81,7 +83,15 @@ class _QuestionState extends State<Question> {
                       questionNumber++;
                     });
                   } else {
-                    // 結果画面に遷移
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Result(
+                          numberOfCorrectAnswers: numberOfCorrectAnswers,
+                          numberOfAll: questions.length,
+                        ),
+                      ),
+                    );
                   }
                 },
                 child: Text(
@@ -112,7 +122,15 @@ class _QuestionState extends State<Question> {
                       questionNumber++;
                     });
                   } else {
-                    // 結果画面に遷移
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Result(
+                          numberOfCorrectAnswers: numberOfCorrectAnswers,
+                          numberOfAll: questions.length,
+                        ),
+                      ),
+                    );
                   }
                 },
                 child: Text(
